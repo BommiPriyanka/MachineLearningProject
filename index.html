@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+      body {
+      background: url('/static/uploads/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: rgb(16, 15, 15);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(219, 127, 136, 0.95);
+      color: black;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .sign-in-btn {
+      background: #2575fc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .glaucoma-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 20px 0;
+      color: rgb(21, 21, 21);
+    }
+
+    .container {
+      display: flex;
+      padding: 4px;
+      gap: 0px;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .left h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+ 
+   
+
+    .upload-box {
+      border:none;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .upload-box button {
+      background: #2575fc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>GLAUCOMA DETECTOR</h1>
+    </div>
+  </header>
+ <div class="container">
+    <div class="left">
+      <div class="upload-box">
+        <h2>Glaucoma Detection</h2>
+      <p>Upload an eye image to detect signs of glaucoma using AI-based analysis</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/*" required>
+  <br><br>
+  <button type="submit">Analyze Image</button>
+  </form>
+
+
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+</body>
+</html>
